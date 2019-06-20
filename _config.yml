@@ -105,7 +105,7 @@ sources: # bootcdn (default), unpkg
 ## => Sharing
 ##############################
 sharing:
-  provider: true # false (default), "addtoany", "addthis"
+  provider: false # false (default), "addtoany", "addthis"
 
   ## AddThis
   addthis:
@@ -114,41 +114,30 @@ sharing:
 
 ## => Comments
 ##############################
+# comments:
+#   provider: valine
+#   valine:
+#     app_id  : "GS7qiiKuiNHw5FUHfraskzVn-gzGzoHsz"
+#     app_key : "dTriqxl89hVejhugc0OJuIgw"
+#     placeholder : "写点什么吧"
 comments:
-  provider: true # false (default), "disqus", "gitalk", "valine", "custom"
-
-  # ## Disqus
-  # disqus:
-  #   shortname: # the Disqus shortname for the site
-
-  ## Gitalk
-  # please refer to https://github.com/gitalk/gitalk for more info.
+  provider: gitalk 
   gitalk:
-    clientID    : "ca41aaaf80936f8dd9e4" # GitHub Application Client ID
-    clientSecret: "e5c9b823850309e9834557be85d4a6a55f66802c" # GitHub Application Client Secret
-    repository  : "icaner.github.io" # GitHub repo
-    owner       : "icaner" # GitHub repo owner
-    admin: # GitHub repo owner and collaborators, only these guys can initialize GitHub issues, IT IS A LIST.
-      - "icaner" # - your GitHub Id
-
-  # ## Valine
-  # # please refer to https://valine.js.org/en/ for more info.
-  # valine:
-  #   app_id      : # LeanCloud App id
-  #   app_key     : # LeanCloud App key
-  #   placeholder : # Prompt information
-
+    clientID    : "ca41aaaf80936f8dd9e4"
+    clientSecret: "e5c9b823850309e9834557be85d4a6a55f66802c"
+    repository  : "icaner/icaner.github.io"
+    owner       : "icaner"
+    admin:
+      - "icaner"
 
 ## => Pageview
 ##############################
 pageview:
-  provider: true # false (default), "leancloud", "custom"
-
-  ## Leancloud
+  provider: leancloud
   leancloud:
-    app_id    : # LeanCloud App id
-    app_key   : # LeanCloud App key
-    app_class : # LeanCloud App class
+    app_id    : "GS7qiiKuiNHw5FUHfraskzVn-gzGzoHsz"
+    app_key   : "dTriqxl89hVejhugc0OJuIgw"
+    app_class : "Test"
 
 
 ## => Analytics
@@ -196,8 +185,10 @@ defaults:
       license: true
       aside:
         toc: true
-      show_edit_on_github: true
+      show_edit_on_github: false
       pageview: true
+      comment: true
+      show_author_profile: true
 
 
 ## => Plugins

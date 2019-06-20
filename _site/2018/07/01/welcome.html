@@ -4,7 +4,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"><title>Welcome - 泡菜 & 娜塔莎</title>
 
 <meta name="description" content="If you see this page, that means you have setup your site. enjoy! :ghost: :ghost: :ghost:You may want to config the site or writing a post next. Please feel ...">
-<link rel="canonical" href="http://localhost:4000/2018/07/01/welcome.html"><link rel="alternate" type="application/rss+xml" title="泡菜 & 娜塔莎" href="/feed.xml">
+<link rel="canonical" href="/2018/07/01/welcome.html"><link rel="alternate" type="application/rss+xml" title="泡菜 & 娜塔莎" href="/feed.xml">
 <!-- begin favicon --><link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png"><link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png"><link rel="manifest" href="/assets/site.webmanifest"><link rel="mask-icon" href="/assets/safari-pinned-tab.svg" color="#fc4d50"><link rel="shortcut icon" href="/assets/favicon.ico">
 
 <meta name="msapplication-TileColor" content="#ffc40d"><meta name="msapplication-config" content="/assets/browserconfig.xml">
@@ -289,11 +289,7 @@
               <div class="col-aside d-print-none js-col-aside"><aside class="page__aside js-page-aside"><div class="toc-aside js-toc-root"></div></aside></div>
 
               <div class="col-main cell cell--auto">
-<article itemscope itemtype="http://schema.org/Article"><div class="article__header">
-<header><h1>Welcome</h1></header><span class="split-space"> </span>
-          <a class="edit-on-github" title="在 Github 上修改" href="https://github.com/icaner/icaner.github.io/tree/master/_posts/2018-07-01-welcome.md">
-            <i class="far fa-edit"></i></a>
-</div>
+<article itemscope itemtype="http://schema.org/Article"><div class="article__header"><header><h1>Welcome</h1></header></div>
 <meta itemprop="headline" content="Welcome">
 <div class="article__info clearfix">
 <ul class="left-col menu"><li>
@@ -327,7 +323,26 @@
 <iframe src="https://ghbtns.com/github-btn.html?user=kitian616&amp;repo=jekyll-TeXt-theme&amp;type=star&amp;count=true" frameborder="0" scrolling="0" width="170px" height="20px"></iframe>
 </div>
 <section class="article__sharing d-print-none"></section><footer class="article__footer"><meta itemprop="dateModified" content="2018-07-01T00:00:00+08:00">
-<!-- this will show at every article content's bottom --><div class="article__license"><div class="license">
+<!-- this will show at every article content's bottom --><div itemscope itemtype="http://schema.org/Person" class="author-profile card card--flat item">
+<img class="author-profile__avatar" itemprop="image" src="/assets/013652269daa2c4429aaf0e68f45561c.jpg"><div class="item__content">
+<meta itemprop="name" content="泡菜">
+        <p class="author-profile__name">泡菜</p>
+<p itemprop="description">I am an amazing person.</p>
+<div class="author-profile__links">
+<div class="author-links">
+  <ul class="menu menu--nowrap menu--inline"><li title="在 Facebook 上关注我。">
+        <a class="button button--circle facebook-button" itemprop="sameAs" href="https://www.facebook.com/Polo%20Mark" target="_blank">
+          <div class="icon"><svg fill="#000000" width="24px" height="24px" viewbox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
+  <path d="M767.428571 6.857143l0 150.857143-89.714286 0q-49.142857 0-66.285714 20.571429t-17.142857 61.714286l0 108 167.428571 0-22.285714 169.142857-145.142857 0 0 433.714286-174.857143 0 0-433.714286-145.714286 0 0-169.142857 145.714286 0 0-124.571429q0-106.285714 59.428571-164.857143t158.285714-58.571429q84 0 130.285714 6.857143z"></path>
+</svg></div>
+        </a>
+      </li></ul>
+</div>
+</div>
+
+    </div>
+</div>
+<div class="article__license"><div class="license">
     <p>本文遵守 <a itemprop="license" rel="license" href="https://creativecommons.org/licenses/by-nc/4.0/">Attribution-NonCommercial 4.0 International</a> 许可协议。
       <a rel="license" href="https://creativecommons.org/licenses/by-nc/4.0/">
         <img alt="Attribution-NonCommercial 4.0 International" src="https://i.creativecommons.org/l/by-nc/4.0/88x31.png">
@@ -371,7 +386,21 @@
   });
 })();</script>
 </div>
-<section class="page__comments d-print-none"></section></article>
+<section class="page__comments d-print-none"><div id="js-gitalk-container"></div>
+<script>
+		window.Lazyload.css('https://cdn.bootcss.com/gitalk/1.2.2/gitalk.min.css');
+		window.Lazyload.js('https://cdn.bootcss.com/gitalk/1.2.2/gitalk.min.js', function() {
+			var gitalk = new Gitalk({
+				clientID: 'ca41aaaf80936f8dd9e4',
+				clientSecret: 'e5c9b823850309e9834557be85d4a6a55f66802c',
+				repo: 'icaner/icaner.github.io',
+				owner: 'icaner',
+				admin: ['icaner'],
+				id: 'B-1774DAEC-B74A-4541-A112-EED062BCF43B'
+			});
+			gitalk.render('js-gitalk-container');
+		});
+	</script></section></article>
               </div>
             </div></div></div>
 <div class="page__footer d-print-none">
@@ -943,7 +972,91 @@ window.Lazyload.js([SOURCES.jquery, PAHTS.search_js], function() {
     var itemIndex = $(this).parent().data('index');
     itemIndex >= 0 && (lastActiveIndex = activeIndex, activeIndex = itemIndex, updateResultItems());
   });
-});</script>
+});</script><script>(function() {
+  function errorHandler(error, callback) {
+    if (error) {
+      callback && callback(error);
+      throw error;
+    }
+  }
+
+  function pageview(_AV  ,options) {
+    var AV = _AV;
+    var appId, appKey, appClass;
+    appId = options.appId;
+    appKey = options.appKey;
+    appClass = options.appClass;
+    AV.init({
+      appId: appId,
+      appKey: appKey
+    });
+    return {
+      get: get,
+      increase: increase
+    };
+
+    function searchKey(key) {
+      var query = new AV.Query(appClass);
+      query.equalTo('key', key);
+      return query.first();
+    }
+
+    function insert(key, title) {
+      var Blog = AV.Object.extend(appClass);
+      var blog = new Blog();
+      blog.set('title', title);
+      blog.set('key', key);
+      blog.set('views', 0);
+      return blog.save();
+    }
+
+    function increment(result) {
+      result.increment('views', 1);
+      return result.save(null, {
+        fetchWhenSave: true
+      });
+    }
+
+    function get(key, callback) {
+      searchKey(key).then(function(result) {
+        if (result) {
+          callback && callback(result.attributes.views);
+        }
+      }, errorHandler);
+    }
+
+    function increase(key, title, callback) {
+      searchKey(key).then(function(result) {
+        if (result) {
+          increment(result).then(function(result) {
+            callback && callback(result.attributes.views);
+          });
+        } else {
+          insert(key, title).then(function(result) {
+            increment(result).then(function(result) {
+              callback && callback(result.attributes.views);
+            });
+          }, errorHandler);
+        }
+      }, errorHandler);
+    }
+  }
+  window.pageview = pageview;
+})();</script>
+  <script>
+    window.Lazyload.js(['https://cdn.bootcss.com/jquery/3.1.1/jquery.min.js', '//cdn1.lncld.net/static/js/3.4.1/av-min.js'], function() {
+      var pageview = window.pageview(AV, {
+        appId:    'GS7qiiKuiNHw5FUHfraskzVn-gzGzoHsz',
+        appKey:   'dTriqxl89hVejhugc0OJuIgw',
+        appClass: 'Test'
+      });
+      var key =   'B-1774DAEC-B74A-4541-A112-EED062BCF43B';
+      var title = window.decodeUrl('Welcome');
+      pageview.increase(key, title, function(view) {
+        $("[data-page-key='B-1774DAEC-B74A-4541-A112-EED062BCF43B']").text(view);
+      });
+    });
+  </script>
     </div>
     <script>(function () {
   var $root = document.getElementsByClassName('root')[0];

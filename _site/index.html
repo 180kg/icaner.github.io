@@ -5,7 +5,7 @@
 
 <meta name="description" content="A website with awesome stories.
 ">
-<link rel="canonical" href="http://localhost:4000/"><link rel="alternate" type="application/rss+xml" title="泡菜 & 娜塔莎" href="/feed.xml">
+<link rel="canonical" href="/"><link rel="alternate" type="application/rss+xml" title="泡菜 & 娜塔莎" href="/feed.xml">
 <!-- begin favicon --><link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png"><link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png"><link rel="manifest" href="/assets/site.webmanifest"><link rel="mask-icon" href="/assets/safari-pinned-tab.svg" color="#fc4d50"><link rel="shortcut icon" href="/assets/favicon.ico">
 
 <meta name="msapplication-TileColor" content="#ffc40d"><meta name="msapplication-config" content="/assets/browserconfig.xml">
@@ -822,7 +822,93 @@ window.Lazyload.js([SOURCES.jquery, PAHTS.search_js], function() {
     var itemIndex = $(this).parent().data('index');
     itemIndex >= 0 && (lastActiveIndex = activeIndex, activeIndex = itemIndex, updateResultItems());
   });
-});</script>
+});</script><script>(function() {
+  function errorHandler(error, callback) {
+    if (error) {
+      callback && callback(error);
+      throw error;
+    }
+  }
+
+  function pageview(_AV  ,options) {
+    var AV = _AV;
+    var appId, appKey, appClass;
+    appId = options.appId;
+    appKey = options.appKey;
+    appClass = options.appClass;
+    AV.init({
+      appId: appId,
+      appKey: appKey
+    });
+    return {
+      get: get,
+      increase: increase
+    };
+
+    function searchKey(key) {
+      var query = new AV.Query(appClass);
+      query.equalTo('key', key);
+      return query.first();
+    }
+
+    function insert(key, title) {
+      var Blog = AV.Object.extend(appClass);
+      var blog = new Blog();
+      blog.set('title', title);
+      blog.set('key', key);
+      blog.set('views', 0);
+      return blog.save();
+    }
+
+    function increment(result) {
+      result.increment('views', 1);
+      return result.save(null, {
+        fetchWhenSave: true
+      });
+    }
+
+    function get(key, callback) {
+      searchKey(key).then(function(result) {
+        if (result) {
+          callback && callback(result.attributes.views);
+        }
+      }, errorHandler);
+    }
+
+    function increase(key, title, callback) {
+      searchKey(key).then(function(result) {
+        if (result) {
+          increment(result).then(function(result) {
+            callback && callback(result.attributes.views);
+          });
+        } else {
+          insert(key, title).then(function(result) {
+            increment(result).then(function(result) {
+              callback && callback(result.attributes.views);
+            });
+          }, errorHandler);
+        }
+      }, errorHandler);
+    }
+  }
+  window.pageview = pageview;
+})();</script>
+  <script>
+    window.Lazyload.js(['https://cdn.bootcss.com/jquery/3.1.1/jquery.min.js', '//cdn1.lncld.net/static/js/3.4.1/av-min.js'], function() {
+      var pageview = window.pageview(AV, {
+        appId:    'GS7qiiKuiNHw5FUHfraskzVn-gzGzoHsz',
+        appKey:   'dTriqxl89hVejhugc0OJuIgw',
+        appClass: 'Test'
+      });
+      $('.js-pageview').each(function() {
+        var $this = $(this);
+        var key = $this.attr('data-page-key');
+        pageview.get(key, function(view) {
+          $this.attr('itemprop', 'userInteractionCount').attr('content', view).text(view);
+        });
+      });
+    });
+  </script>
     </div>
     <script>(function () {
   var $root = document.getElementsByClassName('root')[0];
