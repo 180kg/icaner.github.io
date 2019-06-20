@@ -354,20 +354,7 @@
       });
     });
   });
-})();</script></div><section class="page__comments d-print-none"><div id="js-gitalk-container"></div><script>
-		window.Lazyload.css('https://cdn.bootcss.com/gitalk/1.2.2/gitalk.min.css');
-		window.Lazyload.js('https://cdn.bootcss.com/gitalk/1.2.2/gitalk.min.js', function() {
-			var gitalk = new Gitalk({
-				clientID: 'ca41aaaf80936f8dd9e4',
-				clientSecret: 'e5c9b823850309e9834557be85d4a6a55f66802c',
-				repo: 'icaner/icaner.github.io',
-				owner: 'icaner',
-				admin: ['icaner'],
-				id: 'A-D32CB684-D3D9-4E32-B5AC-D01AEE730577'
-			});
-			gitalk.render('js-gitalk-container');
-		});
-	</script></section></article>
+})();</script></div><section class="page__comments d-print-none"></section></article>
               </div>
             </div></div></div><div class="page__footer d-print-none">
 <div class="footer js-page-footer">
@@ -930,91 +917,7 @@ window.Lazyload.js([SOURCES.jquery, PAHTS.search_js], function() {
     var itemIndex = $(this).parent().data('index');
     itemIndex >= 0 && (lastActiveIndex = activeIndex, activeIndex = itemIndex, updateResultItems());
   });
-});</script><script>(function() {
-  function errorHandler(error, callback) {
-    if (error) {
-      callback && callback(error);
-      throw error;
-    }
-  }
-
-  function pageview(_AV  ,options) {
-    var AV = _AV;
-    var appId, appKey, appClass;
-    appId = options.appId;
-    appKey = options.appKey;
-    appClass = options.appClass;
-    AV.init({
-      appId: appId,
-      appKey: appKey
-    });
-    return {
-      get: get,
-      increase: increase
-    };
-
-    function searchKey(key) {
-      var query = new AV.Query(appClass);
-      query.equalTo('key', key);
-      return query.first();
-    }
-
-    function insert(key, title) {
-      var Blog = AV.Object.extend(appClass);
-      var blog = new Blog();
-      blog.set('title', title);
-      blog.set('key', key);
-      blog.set('views', 0);
-      return blog.save();
-    }
-
-    function increment(result) {
-      result.increment('views', 1);
-      return result.save(null, {
-        fetchWhenSave: true
-      });
-    }
-
-    function get(key, callback) {
-      searchKey(key).then(function(result) {
-        if (result) {
-          callback && callback(result.attributes.views);
-        }
-      }, errorHandler);
-    }
-
-    function increase(key, title, callback) {
-      searchKey(key).then(function(result) {
-        if (result) {
-          increment(result).then(function(result) {
-            callback && callback(result.attributes.views);
-          });
-        } else {
-          insert(key, title).then(function(result) {
-            increment(result).then(function(result) {
-              callback && callback(result.attributes.views);
-            });
-          }, errorHandler);
-        }
-      }, errorHandler);
-    }
-  }
-  window.pageview = pageview;
-})();</script>
-  <script>
-    window.Lazyload.js(['https://cdn.bootcss.com/jquery/3.1.1/jquery.min.js', '//cdn1.lncld.net/static/js/3.4.1/av-min.js'], function() {
-      var pageview = window.pageview(AV, {
-        appId:    'GS7qiiKuiNHw5FUHfraskzVn-gzGzoHsz',
-        appKey:   'dTriqxl89hVejhugc0OJuIgw',
-        appClass: 'Test'
-      });
-      var key =   'A-D32CB684-D3D9-4E32-B5AC-D01AEE730577';
-      var title = window.decodeUrl('md-test');
-      pageview.increase(key, title, function(view) {
-        $("[data-page-key='A-D32CB684-D3D9-4E32-B5AC-D01AEE730577']").text(view);
-      });
-    });
-  </script>
+});</script>
     </div>
     <script>(function () {
   var $root = document.getElementsByClassName('root')[0];
