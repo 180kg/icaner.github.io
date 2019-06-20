@@ -125,7 +125,7 @@ comments:
   gitalk:
     clientID    : "ca41aaaf80936f8dd9e4"
     clientSecret: "e5c9b823850309e9834557be85d4a6a55f66802c"
-    repository  : "icaner/icaner.github.io"
+    repository  : "icaner.github.io"
     owner       : "icaner"
     admin:
       - "icaner"
