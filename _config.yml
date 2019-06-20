@@ -20,27 +20,26 @@ text_skin: default # "default" (default), "dark", "forest", "ocean", "chocolate"
 highlight_theme: default # "default" (default), "tomorrow", "tomorrow-night", "tomorrow-night-eighties", "tomorrow-night-blue", "tomorrow-night-bright"
 url     : # the base hostname & protocol for your site e.g. https://www.someone.com
 baseurl : # does not include hostname
-title   : Your Site Title
+title   : 泡菜 & 娜塔莎
 description: > # this means to ignore newlines until "Language & timezone"
-  Your Site Description
-
+  A website with awesome stories.
 
 ## => Language and Timezone
 ##############################
-lang: # the language of your site, "en" (default, English), "zh"(简体中文), "zh-Hans"(简体中文), "zh-Hant"(繁體中文)
-timezone: # see https://en.wikipedia.org/wiki/List_of_tz_database_time_zones for the available values
+lang: "zh"
+timezone: "Asia/Shanghai"
 
 
 ## => Author and Social
 ##############################
 author:
   type      : # "person" (default), "organization"
-  name      : Your Name
+  name      : 泡菜
   url       :
-  avatar    : # path or url of avatar image
+  avatar    : "/assets/013652269daa2c4429aaf0e68f45561c.jpg"
   bio       : I am an amazing person.
   email     :
-  facebook  : # "user_name" the last part of your profile url, e.g. https://www.facebook.com/user_name
+  facebook  : "Polo Mark" # "user_name" the last part of your profile url, e.g. https://www.facebook.com/user_name
   twitter   : # "user_name" the last part of your profile url, e.g. https://twitter.com/user_name
   googleplus: # "user_id"   the last part of your profile url, e.g. https://plus.google.com/u/0/user_id
   weibo     : # "user_id"   the last part of your profile url, e.g. https://www.weibo.com/user_id/profile?...
@@ -53,7 +52,7 @@ author:
 
 ## => GitHub Repository (if the site is hosted by GitHub)
 ##############################
-repository: user_name/repo_name
+repository: icaner/icaner.github.io
 repository_tree: master
 
 
@@ -106,7 +105,7 @@ sources: # bootcdn (default), unpkg
 ## => Sharing
 ##############################
 sharing:
-  provider: false # false (default), "addtoany", "addthis"
+  provider: true # false (default), "addtoany", "addthis"
 
   ## AddThis
   addthis:
@@ -116,7 +115,7 @@ sharing:
 ## => Comments
 ##############################
 comments:
-  provider: false # false (default), "disqus", "gitalk", "valine", "custom"
+  provider: true # false (default), "disqus", "gitalk", "valine", "custom"
 
   ## Disqus
   disqus:
@@ -125,12 +124,12 @@ comments:
   ## Gitalk
   # please refer to https://github.com/gitalk/gitalk for more info.
   gitalk:
-    clientID    : # GitHub Application Client ID
-    clientSecret: # GitHub Application Client Secret
-    repository  : # GitHub repo
-    owner       : # GitHub repo owner
+    clientID    : f5d8a89ced06b0c8ab4b # GitHub Application Client ID
+    clientSecret: fecd72a756ac59ba10403822efed5acb53e88b61 # GitHub Application Client Secret
+    repository  : icaner.github.io # GitHub repo
+    owner       : icaner # GitHub repo owner
     admin: # GitHub repo owner and collaborators, only these guys can initialize GitHub issues, IT IS A LIST.
-      # - your GitHub Id
+      - icaner # - your GitHub Id
 
   ## Valine
   # please refer to https://valine.js.org/en/ for more info.
@@ -143,7 +142,7 @@ comments:
 ## => Pageview
 ##############################
 pageview:
-  provider: false # false (default), "leancloud", "custom"
+  provider: true # false (default), "leancloud", "custom"
 
   ## Leancloud
   leancloud:
@@ -155,7 +154,7 @@ pageview:
 ## => Analytics
 ##############################
 analytics:
-  provider: false # false (default), "google", "custom"
+  provider: true # false (default), "google", "custom"
 
   ## Google Analytics
   google:
