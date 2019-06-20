@@ -117,26 +117,26 @@ sharing:
 comments:
   provider: true # false (default), "disqus", "gitalk", "valine", "custom"
 
-  ## Disqus
-  disqus:
-    shortname: # the Disqus shortname for the site
+  # ## Disqus
+  # disqus:
+  #   shortname: # the Disqus shortname for the site
 
   ## Gitalk
   # please refer to https://github.com/gitalk/gitalk for more info.
   gitalk:
-    clientID    : f5d8a89ced06b0c8ab4b # GitHub Application Client ID
-    clientSecret: fecd72a756ac59ba10403822efed5acb53e88b61 # GitHub Application Client Secret
-    repository  : icaner.github.io # GitHub repo
-    owner       : icaner # GitHub repo owner
+    clientID    : "f5d8a89ced06b0c8ab4b" # GitHub Application Client ID
+    clientSecret: "fecd72a756ac59ba10403822efed5acb53e88b61" # GitHub Application Client Secret
+    repository  : "icaner.github.io" # GitHub repo
+    owner       : "icaner" # GitHub repo owner
     admin: # GitHub repo owner and collaborators, only these guys can initialize GitHub issues, IT IS A LIST.
-      - icaner # - your GitHub Id
+      - "icaner" # - your GitHub Id
 
-  ## Valine
-  # please refer to https://valine.js.org/en/ for more info.
-  valine:
-    app_id      : # LeanCloud App id
-    app_key     : # LeanCloud App key
-    placeholder : # Prompt information
+  # ## Valine
+  # # please refer to https://valine.js.org/en/ for more info.
+  # valine:
+  #   app_id      : # LeanCloud App id
+  #   app_key     : # LeanCloud App key
+  #   placeholder : # Prompt information
 
 
 ## => Pageview
