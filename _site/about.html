@@ -399,7 +399,20 @@
       });
     });
   });
-})();</script></div><section class="page__comments d-print-none"></section></article>
+})();</script></div><section class="page__comments d-print-none"><div id="js-gitalk-container"></div><script>
+		window.Lazyload.css('https://cdn.bootcss.com/gitalk/1.2.2/gitalk.min.css');
+		window.Lazyload.js('https://cdn.bootcss.com/gitalk/1.2.2/gitalk.min.js', function() {
+			var gitalk = new Gitalk({
+				clientID: 'ca41aaaf80936f8dd9e4',
+				clientSecret: 'e5c9b823850309e9834557be85d4a6a55f66802c',
+				repo: 'icaner.github.io',
+				owner: 'icaner',
+				admin: ['icaner'],
+				id: 'page-about'
+			});
+			gitalk.render('js-gitalk-container');
+		});
+	</script></section></article>
               </div>
             </div></div></div><div class="page__footer d-print-none">
 <div class="footer js-page-footer">
