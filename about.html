@@ -420,7 +420,17 @@
 			});
 			gitalk.render('js-gitalk-container');
 		});
-	</script></section></article>
+	</script><div id="vcomments"></div>
+<script>
+  window.Lazyload.js(['//cdn1.lncld.net/static/js/3.4.1/av-min.js', 'https://unpkg.com/valine/dist/Valine.min.js'], function() {
+    var _config = {
+      el: '#vcomments',
+      appId:  'bOoxx0S6qF020p61rcjDQhTr-gzGzoHsz',
+      appKey: '9n52JIrxxqpNoWb7XNRVX0c2',
+      verify: true,
+    };_config.placeholder = 'Ctrl + Enter 发送回复';_config.lang = 'en';new Valine(_config);
+  });
+</script></section></article>
               </div>
             </div></div></div><div class="page__footer d-print-none">
 <div class="footer js-page-footer">

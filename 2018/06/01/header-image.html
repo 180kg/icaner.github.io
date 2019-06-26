@@ -337,7 +337,17 @@
 			});
 			gitalk.render('js-gitalk-container');
 		});
-	</script></section></article>
+	</script><div id="vcomments"></div>
+<script>
+  window.Lazyload.js(['//cdn1.lncld.net/static/js/3.4.1/av-min.js', 'https://unpkg.com/valine/dist/Valine.min.js'], function() {
+    var _config = {
+      el: '#vcomments',
+      appId:  'bOoxx0S6qF020p61rcjDQhTr-gzGzoHsz',
+      appKey: '9n52JIrxxqpNoWb7XNRVX0c2',
+      verify: true,
+    };_config.placeholder = 'Ctrl + Enter 发送回复';_config.lang = 'en';new Valine(_config);
+  });
+</script></section></article>
               </div>
             </div></div></div><div class="page__footer d-print-none">
 <div class="footer js-page-footer">
@@ -1041,9 +1051,9 @@ window.Lazyload.js([SOURCES.jquery, PAHTS.search_js], function() {
   <script>
     window.Lazyload.js(['https://cdn.bootcss.com/jquery/3.1.1/jquery.min.js', '//cdn1.lncld.net/static/js/3.4.1/av-min.js'], function() {
       var pageview = window.pageview(AV, {
-        appId:    'XJz6UhOkDMtwMl4md3H3MNKA-MdYXbMMI',
-        appKey:   'KgngFnCEb0jvrrHHY8UqBIP7',
-        appClass: ' Pageview'
+        appId:    'bOoxx0S6qF020p61rcjDQhTr-gzGzoHsz',
+        appKey:   '9n52JIrxxqpNoWb7XNRVX0c2',
+        appClass: 'Pageview'
       });
       var key =   'KEY-60D4A702-BD03-491C-9753-EF0C75D16ABF';
       var title = window.decodeUrl('Post+with+Header+Image');
